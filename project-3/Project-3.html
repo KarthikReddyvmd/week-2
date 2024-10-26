@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Layout</title>
+    <style>
+        :root {
+    --primary-color: #3498db;
+    --font-size: 16px;
+    --spacing: 20px;
+}
+
+body {
+    font-size: var(--font-size);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+}
+
+header, footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sidebar {
+    display: block;
+    position: sticky;
+    top: 0;
+    width: 25%;
+    padding: var(--spacing);
+    background-color: whitesmoke;
+}
+
+.content {
+    display: block;
+    width: 75%;
+    padding: var(--spacing);
+}
+
+.post {
+    display: block;
+    margin-bottom: var(--spacing);
+    padding: var(--spacing);
+    background-color: rgb(186, 170, 170);
+    border: 1px solid rgb(231, 171, 171);
+    transition: transform 0.3s ease;
+}
+
+.post:hover {
+    transform: scale(1.02);
+}
+
+a:visited {
+    color: #6a5acd;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <article class="post">
+                <h2>Post Title 1</h2>
+                <p>This is the content of the first post.</p>
+            </article>
+            <article class="post">
+                <h2>Post Title 2</h2>
+                <p>This is the content of the second post.</p>
+            </article>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Blog</p>
+    </footer>
+</body>
+</html>

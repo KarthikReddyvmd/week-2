@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading with Decorative Line</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+.decorative-heading {
+    position: relative;
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.decorative-heading::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #333;
+    margin: 10px auto;
+}
+    </style>
+</head>
+<body>
+    <h1 class="decorative-heading">Welcome to My Blog</h1>
+</body>
+</html>

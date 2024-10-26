@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS Variables</title>
+    <style>
+        :root {
+            --primary-color: #3498db; /* Define a primary color variable */
+            --font-size: 16px; /* Define a font size variable */
+        }
+
+        body {
+            font-size: var(--font-size); /* Use the font size variable */
+            color: var(--primary-color); /* Use the primary color variable */
+        }
+
+        h1 {
+            color: var(--primary-color); /* Use the primary color variable */
+        }
+
+        p {
+            font-size: 1.2em; /* Slightly larger than the base font size */
+        }
+
+        .button {
+            background-color: var(--primary-color); /* Use the primary color variable */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Website</h1>
+    <p>This is a paragraph with a slightly larger font size.</p>
+    <button class="button">Click Me</button>
+</body>
+</html>
